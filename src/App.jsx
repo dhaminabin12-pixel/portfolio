@@ -5,31 +5,31 @@ const GOLD2 = "#f0d080";
 const BONE = "#f5f0e8";
 const OBSIDIAN = "#03030a";
 
-// ââ DATA ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ── DATA ──────────────────────────────────────────────────────────────────────
 const SERVICES = [
-  { icon:"ð", title:"AI Receptionist Systems", desc:"Handle incoming calls, bookings, and customer queries automatically 24/7. Never miss a lead again.", accent:"#4488ff" },
-  { icon:"âï¸", title:"Automation Workflows", desc:"Build smart systems using n8n and AI to automate your business operations end-to-end.", accent:GOLD },
-  { icon:"ð", title:"Website & Lead Systems", desc:"Create websites and funnels designed to generate leads and bookings on autopilot.", accent:"#22dd88" },
-  { icon:"ð¬", title:"AI Content & Video", desc:"Produce cinematic AI-driven content for marketing and branding at scale.", accent:"#bb44ff" },
+  { icon:"📞", title:"AI Receptionist Systems", desc:"Handle incoming calls, bookings, and customer queries automatically 24/7. Never miss a lead again.", accent:"#4488ff" },
+  { icon:"⚙️", title:"Automation Workflows", desc:"Build smart systems using n8n and AI to automate your business operations end-to-end.", accent:GOLD },
+  { icon:"🌐", title:"Website & Lead Systems", desc:"Create websites and funnels designed to generate leads and bookings on autopilot.", accent:"#22dd88" },
+  { icon:"🎬", title:"AI Content & Video", desc:"Produce cinematic AI-driven content for marketing and branding at scale.", accent:"#bb44ff" },
 ];
 
 const PROJECTS = [
   {
-    num:"01", name:"AI Receptionist", tag:"AI Â· Perth", accent:"#4488ff",
+    num:"01", name:"AI Receptionist", tag:"AI · Perth", accent:"#4488ff",
     problem:"Businesses were missing calls and losing potential bookings after hours.",
     solution:"Built an AI voice receptionist connected to phone systems, calendar, and workflows.",
     result:"Captured missed calls 24/7 and turned them into confirmed bookings automatically.",
     links:[{label:"Watch Demo",href:"#demo"},{label:"View Workflow",href:"#"}],
   },
   {
-    num:"02", name:"Perth Shine Crew", tag:"Local Â· Brand", accent:"#22dd88",
+    num:"02", name:"Perth Shine Crew", tag:"Local · Brand", accent:"#22dd88",
     problem:"Low online presence and poor lead conversion for a growing cleaning business.",
     solution:"Built full brand identity, website, and lead-focused conversion structure.",
     result:"Improved visibility and increased inbound cleaning inquiries significantly.",
     links:[{label:"View Website",href:"#"}],
   },
   {
-    num:"03", name:"TooFan", tag:"SaaS Â· Nepal", accent:"#bb44ff",
+    num:"03", name:"TooFan", tag:"SaaS · Nepal", accent:"#bb44ff",
     problem:"Need for a scalable multi-service food delivery and ride-hailing platform.",
     solution:"Developed full-stack system with multiple apps, backend, and payment integration.",
     result:"Functional platform handling food delivery and ride services across Nepal.",
@@ -47,14 +47,14 @@ const HOW_IT_WORKS = [
 const RESULTS = [
   { stat:"24/7", label:"Always On", desc:"Capture bookings around the clock" },
   { stat:"0", label:"Missed Calls", desc:"Every call handled automatically" },
-  { stat:"3Ã", label:"Faster Response", desc:"Instant replies vs hours of wait" },
-  { stat:"â", label:"Scalability", desc:"Handle any volume without extra staff" },
+  { stat:"3×", label:"Faster Response", desc:"Instant replies vs hours of wait" },
+  { stat:"∞", label:"Scalability", desc:"Handle any volume without extra staff" },
 ];
 
-// ââ SCRAMBLE ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ── SCRAMBLE ──────────────────────────────────────────────────────────────────
 function useScramble(target, trigger) {
   const [txt, setTxt] = useState(target);
-  const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZÎ±Î²Î³Î´Î©Î£âââ¦";
+  const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZαβγδΩΣ∞★✦";
   useEffect(() => {
     if (!trigger) return;
     let f = 0, tot = target.length * 4;
@@ -67,7 +67,7 @@ function useScramble(target, trigger) {
   return txt;
 }
 
-// ââ PER-CHAR 3D SCROLL REVEAL âââââââââââââââââââââââââââââââââââââââââââââââââ
+// ── PER-CHAR 3D SCROLL REVEAL ─────────────────────────────────────────────────
 function Reveal3D({ text, italic=false, color=BONE, size="inherit", delay=0, stagger=45, weight=300, block=false, font="cormorant" }) {
   const ref = useRef(); const [vis,setVis]=useState(false);
   useEffect(()=>{
@@ -91,7 +91,7 @@ function Reveal3D({ text, italic=false, color=BONE, size="inherit", delay=0, sta
   );
 }
 
-// ââ LIQUID HOVER ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ── LIQUID HOVER ──────────────────────────────────────────────────────────────
 function Liquid({ text, base=BONE, hover=GOLD, size="inherit" }) {
   const [h,setH]=useState(false);
   return (
@@ -106,7 +106,7 @@ function Liquid({ text, base=BONE, hover=GOLD, size="inherit" }) {
   );
 }
 
-// ââ GLITCH ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ── GLITCH ────────────────────────────────────────────────────────────────────
 function Glitch({ text, style={} }) {
   const [g,setG]=useState(false);
   useEffect(()=>{
@@ -124,7 +124,7 @@ function Glitch({ text, style={} }) {
   );
 }
 
-// ââ COUNTER âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ── COUNTER ───────────────────────────────────────────────────────────────────
 function Counter({ val, suffix="" }) {
   const [n,setN]=useState(0); const ref=useRef(); const [s,setS]=useState(false);
   useEffect(()=>{const ob=new IntersectionObserver(([e])=>{if(e.isIntersecting)setS(true)},{threshold:.4}); if(ref.current)ob.observe(ref.current); return()=>ob.disconnect();},[]);
@@ -137,7 +137,7 @@ function Counter({ val, suffix="" }) {
   return <span ref={ref}>{isNaN(val)?val:n}{suffix}</span>;
 }
 
-// ââ SECTION LABEL âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ── SECTION LABEL ─────────────────────────────────────────────────────────────
 function Label({ text }) {
   const ref=useRef(); const [v,setV]=useState(false);
   useEffect(()=>{const ob=new IntersectionObserver(([e])=>{if(e.isIntersecting)setV(true)},{threshold:.3}); if(ref.current)ob.observe(ref.current); return()=>ob.disconnect();},[]);
@@ -149,7 +149,7 @@ function Label({ text }) {
   );
 }
 
-// ââ FADE IN DIV âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ── FADE IN DIV ───────────────────────────────────────────────────────────────
 function FadeIn({ children, delay=0, style={} }) {
   const ref=useRef(); const [v,setV]=useState(false);
   useEffect(()=>{const ob=new IntersectionObserver(([e])=>{if(e.isIntersecting)setV(true)},{threshold:.1}); if(ref.current)ob.observe(ref.current); return()=>ob.disconnect();},[]);
@@ -160,7 +160,7 @@ function FadeIn({ children, delay=0, style={} }) {
   );
 }
 
-// ââ GALAXY CANVAS âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ── GALAXY CANVAS ─────────────────────────────────────────────────────────────
 function GalaxyCanvas({ scrollY }) {
   const ref=useRef();
   const sceneRef=useRef(); const camRef=useRef(); const rendRef=useRef();
@@ -301,7 +301,7 @@ function GalaxyCanvas({ scrollY }) {
   return <canvas ref={ref} style={{position:"fixed",top:0,left:0,width:"100%",height:"100%",pointerEvents:"none",zIndex:0}}/>;
 }
 
-// ââ CARD 3D CANVAS ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ── CARD 3D CANVAS ────────────────────────────────────────────────────────────
 function CardCanvas({ accent, idx }) {
   const ref=useRef();
   useEffect(()=>{
@@ -330,7 +330,7 @@ function CardCanvas({ accent, idx }) {
   return <canvas ref={ref} style={{width:"100%",height:"100%",display:"block"}}/>;
 }
 
-// ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════════════════════════════════════
 export default function Portfolio() {
   const [threeOk,setThreeOk]=useState(!!window.THREE);
   const [scrollY,setScrollY]=useState(0);
@@ -434,7 +434,7 @@ export default function Portfolio() {
       <div key={i} style={{position:"fixed",pointerEvents:"none",zIndex:2,width:i%7===0?3:i%5===0?2:1.5,height:i%7===0?3:i%5===0?2:1.5,borderRadius:"50%",background:i%4===0?GOLD:BONE,left:`${(i*17.3)%100}%`,top:`${(i*13.7)%100}%`,animation:`twinkle ${2+i*.07}s ease-in-out infinite`,animationDelay:`${(i*.13)%5}s`,opacity:.35}}/>
     ))}
 
-    {/* ââ NAV ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+    {/* ── NAV ──────────────────────────────────────────────────────────────── */}
     <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:100,padding:"1.5rem 3rem",display:"flex",justifyContent:"space-between",alignItems:"center",background:"linear-gradient(to bottom,rgba(3,3,10,.95),transparent)"}}>
       <div style={{fontFamily:"'Cinzel',serif",fontSize:"1.3rem",fontWeight:700,color:BONE,letterSpacing:".15em",animation:"goldGlow 4s ease-in-out infinite"}}>
         NAB<span style={{color:GOLD}}>IN</span>
@@ -446,7 +446,7 @@ export default function Portfolio() {
       </div>
     </nav>
 
-    {/* ââ HERO ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+    {/* ══ HERO ══════════════════════════════════════════════════════════════════ */}
     <section id="hero" style={{minHeight:"100vh",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",textAlign:"center",position:"relative",overflow:"hidden",zIndex:10,padding:"8rem 4vw 6rem"}}>
 
       {[...Array(9)].map((_,i)=>(
@@ -455,7 +455,7 @@ export default function Portfolio() {
 
       {/* Eyebrow */}
       <p style={{fontFamily:"'Cinzel',serif",fontSize:".6rem",letterSpacing:".6em",color:GOLD,textTransform:"uppercase",animation:"fadeUp 1s .3s both",marginBottom:"2rem",textShadow:`0 0 20px ${GOLD}66`}}>
-        AI Systems Builder Â· Perth, Australia
+        AI Systems Builder · Perth, Australia
       </p>
 
       {/* Name */}
@@ -499,7 +499,7 @@ export default function Portfolio() {
         background:`linear-gradient(90deg,rgba(245,240,232,.15) 0%,${GOLD} 50%,rgba(245,240,232,.15) 100%)`,
         backgroundSize:"300% auto",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text",
       }}>
-        Software Architect &nbsp;Â·&nbsp; AI Automation &nbsp;Â·&nbsp; Digital Ventures
+        Software Architect &nbsp;·&nbsp; AI Automation &nbsp;·&nbsp; Digital Ventures
       </p>
 
       {/* Scroll cue */}
@@ -509,16 +509,16 @@ export default function Portfolio() {
       </div>
     </section>
 
-    {/* ââ MARQUEE ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+    {/* ══ MARQUEE ════════════════════════════════════════════════════════════════ */}
     <div style={{overflow:"hidden",borderTop:`1px solid ${GOLD}22`,borderBottom:`1px solid ${GOLD}22`,padding:"1.3rem 0",background:"rgba(3,3,10,.8)",zIndex:10,position:"relative"}}>
       <div style={{display:"flex",gap:"3rem",animation:"marqueeL 22s linear infinite",width:"max-content"}}>
-        {[...Array(2)].flatMap(()=>["AI Receptionist","â¦","Automation","â¦","Lead Systems","â¦","Voice AI","â¦","n8n Workflows","â¦","24/7 Bookings","â¦","Perth AU","â¦"]).map((item,i)=>(
-          <span key={i} style={{fontFamily:"'Cormorant Garamond',serif",fontSize:"1.1rem",fontStyle:item==="â¦"?"normal":"italic",color:item==="â¦"?GOLD:`${GOLD}55`,whiteSpace:"nowrap",letterSpacing:".12em"}}>{item}</span>
+        {[...Array(2)].flatMap(()=>["AI Receptionist","✦","Automation","✦","Lead Systems","✦","Voice AI","✦","n8n Workflows","✦","24/7 Bookings","✦","Perth AU","✦"]).map((item,i)=>(
+          <span key={i} style={{fontFamily:"'Cormorant Garamond',serif",fontSize:"1.1rem",fontStyle:item==="✦"?"normal":"italic",color:item==="✦"?GOLD:`${GOLD}55`,whiteSpace:"nowrap",letterSpacing:".12em"}}>{item}</span>
         ))}
       </div>
     </div>
 
-    {/* ââ SERVICES / WHAT I DO âââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+    {/* ══ SERVICES / WHAT I DO ═══════════════════════════════════════════════════ */}
     <section id="services" style={{padding:"9rem 6vw",zIndex:10,position:"relative",background:"rgba(3,3,10,.6)"}}>
       <div style={{maxWidth:1300,margin:"0 auto"}}>
         <Label text="What I Do"/>
@@ -537,7 +537,7 @@ export default function Portfolio() {
                     <h3 style={{fontFamily:"'Cinzel',serif",fontSize:"1rem",fontWeight:600,color:BONE,marginBottom:".8rem",letterSpacing:".05em",lineHeight:1.4}}>
                       <Liquid text={sv.title} base={BONE} hover={sv.accent} size="1rem"/>
                     </h3>
-                    <p style={{fontSize:".7rem",color:"rgba(245,240,232,.45)",lineHeight:1.9}}>â {sv.desc}</p>
+                    <p style={{fontSize:".7rem",color:"rgba(245,240,232,.45)",lineHeight:1.9}}>→ {sv.desc}</p>
                   </div>
                 </div>
               </div>
@@ -547,7 +547,7 @@ export default function Portfolio() {
       </div>
     </section>
 
-    {/* ââ FEATURED WORK ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+    {/* ══ FEATURED WORK ══════════════════════════════════════════════════════════ */}
     <section id="work" style={{padding:"8rem 0",zIndex:10,position:"relative",background:"rgba(3,3,10,.75)"}}>
       <div style={{padding:"0 6vw",marginBottom:"4rem",maxWidth:1300,marginLeft:"auto",marginRight:"auto"}}>
         <Label text="Featured Work"/>
@@ -595,7 +595,7 @@ export default function Portfolio() {
       </div>
     </section>
 
-    {/* ââ LIVE DEMO ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+    {/* ══ LIVE DEMO ══════════════════════════════════════════════════════════════ */}
     <section id="demo" style={{padding:"9rem 6vw",zIndex:10,position:"relative",background:`rgba(201,168,76,.02)`,borderTop:`1px solid ${GOLD}15`}}>
       <div style={{maxWidth:1100,margin:"0 auto"}}>
         <Label text="Live Demo"/>
@@ -604,7 +604,7 @@ export default function Portfolio() {
             <Reveal3D text="Try the AI" size="clamp(2.5rem,4vw,4.5rem)" color={BONE} font="cinzel" stagger={40}/>
             <Reveal3D text="Receptionist" size="clamp(2.5rem,4vw,4.5rem)" color={GOLD} italic stagger={35} delay={250}/>
             <p style={{fontSize:".78rem",color:"rgba(245,240,232,.5)",lineHeight:2,marginTop:"1.8rem",marginBottom:"2.5rem"}}>
-              Call and experience how it handles bookings in real time. Hear the AI pick up, qualify your inquiry, and book you in â all without a human.
+              Call and experience how it handles bookings in real time. Hear the AI pick up, qualify your inquiry, and book you in — all without a human.
             </p>
             <FadeIn delay={200}>
               <div style={{border:`1px solid ${GOLD}33`,padding:"2rem",background:"rgba(201,168,76,.04)",marginBottom:"1.5rem"}}>
@@ -612,7 +612,7 @@ export default function Portfolio() {
                 <p style={{fontFamily:"'Cinzel',serif",fontSize:"2rem",fontWeight:700,color:BONE,letterSpacing:".1em",animation:"goldGlow 3s ease-in-out infinite"}}>
                   +61 XXX XXX XXX
                 </p>
-                <p style={{fontSize:".6rem",color:"rgba(245,240,232,.3)",marginTop:".5rem"}}>Live AI receptionist â available 24/7</p>
+                <p style={{fontSize:".6rem",color:"rgba(245,240,232,.3)",marginTop:".5rem"}}>Live AI receptionist — available 24/7</p>
               </div>
             </FadeIn>
           </div>
@@ -632,7 +632,7 @@ export default function Portfolio() {
       </div>
     </section>
 
-    {/* ââ HOW IT WORKS âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+    {/* ══ HOW IT WORKS ═══════════════════════════════════════════════════════════ */}
     <section id="how" style={{padding:"9rem 6vw",zIndex:10,position:"relative",background:"rgba(3,3,10,.7)"}}>
       <div style={{maxWidth:1100,margin:"0 auto"}}>
         <Label text="Process"/>
@@ -661,7 +661,7 @@ export default function Portfolio() {
       </div>
     </section>
 
-    {/* ââ RESULTS & IMPACT âââââââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+    {/* ══ RESULTS & IMPACT ═══════════════════════════════════════════════════════ */}
     <section id="results" style={{padding:"9rem 6vw",zIndex:10,position:"relative",borderTop:`1px solid ${GOLD}15`,background:`rgba(201,168,76,.025)`}}>
       <div style={{maxWidth:1300,margin:"0 auto"}}>
         <Label text="Results & Impact"/>
@@ -673,7 +673,7 @@ export default function Portfolio() {
             <FadeIn key={r.label} delay={i*80}>
               <div className="result-card">
                 <div style={{fontFamily:"'Cinzel',serif",fontSize:"clamp(2.5rem,4vw,3.5rem)",fontWeight:900,color:GOLD,lineHeight:1,marginBottom:".5rem",animation:"goldGlow 4s ease-in-out infinite",animationDelay:`${i*.5}s`}}>
-                  <Counter val={isNaN(r.stat)?r.stat:parseInt(r.stat)} suffix={r.stat.includes("Ã")?"Ã":r.stat.includes("/")?"/7":""}/>
+                  <Counter val={isNaN(r.stat)?r.stat:parseInt(r.stat)} suffix={r.stat.includes("×")?"×":r.stat.includes("/")?"/7":""}/>
                 </div>
                 <div style={{fontFamily:"'Cinzel',serif",fontSize:".75rem",fontWeight:600,color:BONE,letterSpacing:".15em",textTransform:"uppercase",marginBottom:".5rem"}}>{r.label}</div>
                 <div style={{fontSize:".62rem",color:"rgba(245,240,232,.35)",lineHeight:1.7}}>{r.desc}</div>
@@ -686,7 +686,7 @@ export default function Portfolio() {
           {["Reduce missed calls and lost opportunities","Capture bookings automatically 24/7","Save time on manual and repetitive tasks","Improve customer response speed instantly"].map((b,i)=>(
             <FadeIn key={b} delay={i*80}>
               <div style={{display:"flex",gap:"1rem",alignItems:"flex-start",padding:"1.2rem",border:`1px solid ${GOLD}18`}}>
-                <span style={{color:GOLD,fontSize:"1rem",flexShrink:0,marginTop:".1rem"}}>â</span>
+                <span style={{color:GOLD,fontSize:"1rem",flexShrink:0,marginTop:".1rem"}}>✔</span>
                 <p style={{fontSize:".7rem",color:"rgba(245,240,232,.55)",lineHeight:1.75}}>{b}</p>
               </div>
             </FadeIn>
@@ -695,7 +695,7 @@ export default function Portfolio() {
       </div>
     </section>
 
-    {/* ââ ABOUT ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+    {/* ══ ABOUT ══════════════════════════════════════════════════════════════════ */}
     <section id="about" style={{padding:"9rem 6vw",position:"relative",zIndex:10,background:"rgba(3,3,10,.6)"}}>
       <div style={{maxWidth:1300,margin:"0 auto",display:"grid",gridTemplateColumns:"1fr 1fr",gap:"6rem",alignItems:"center"}}>
         <div>
@@ -730,7 +730,7 @@ export default function Portfolio() {
       </div>
     </section>
 
-    {/* ââ TESTIMONIAL ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+    {/* ══ TESTIMONIAL ════════════════════════════════════════════════════════════ */}
     <section style={{padding:"7rem 6vw",zIndex:10,position:"relative",borderTop:`1px solid ${GOLD}15`,background:"rgba(3,3,10,.8)"}}>
       <div style={{maxWidth:900,margin:"0 auto",textAlign:"center"}}>
         <Label text="Client Words"/>
@@ -743,14 +743,14 @@ export default function Portfolio() {
             </p>
             <div style={{marginTop:"2rem",borderTop:`1px solid ${GOLD}22`,paddingTop:"1.5rem"}}>
               <p style={{fontFamily:"'Cinzel',serif",fontSize:".75rem",color:GOLD,letterSpacing:".2em"}}>CLIENT NAME</p>
-              <p style={{fontSize:".58rem",color:"rgba(245,240,232,.3)",letterSpacing:".3em",marginTop:".3rem",textTransform:"uppercase"}}>Perth, Australia â replace with real testimonial</p>
+              <p style={{fontSize:".58rem",color:"rgba(245,240,232,.3)",letterSpacing:".3em",marginTop:".3rem",textTransform:"uppercase"}}>Perth, Australia — replace with real testimonial</p>
             </div>
           </div>
         </FadeIn>
       </div>
     </section>
 
-    {/* ââ FINAL CTA / CONTACT ââââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+    {/* ══ FINAL CTA / CONTACT ════════════════════════════════════════════════════ */}
     <section id="contact" ref={ctaRef} style={{padding:"9rem 6vw",textAlign:"center",zIndex:10,position:"relative",overflow:"hidden",background:"rgba(3,3,10,.9)"}}>
       {[1,2,3,4].map(n=>(
         <div key={n} style={{position:"absolute",top:"50%",left:"50%",borderRadius:"50%",border:`1px solid ${GOLD}${["18","10","0a","06"][n-1]}`,width:`${n*28}vw`,height:`${n*28}vw`,transform:"translate(-50%,-50%)",animation:`orbSpin ${12+n*10}s linear infinite`,pointerEvents:"none"}}/>
@@ -773,13 +773,13 @@ export default function Portfolio() {
           <button className="btn-gold" onClick={()=>go("demo")}>Book a Demo</button>
           <a href="mailto:nabin@example.com" className="cta">Contact Me</a>
         </div>
-        <p style={{fontSize:".58rem",letterSpacing:".35em",color:"rgba(245,240,232,.2)",textTransform:"uppercase",marginTop:"2rem"}}>nabin@example.com &nbsp;Â·&nbsp; Perth, Australia</p>
+        <p style={{fontSize:".58rem",letterSpacing:".35em",color:"rgba(245,240,232,.2)",textTransform:"uppercase",marginTop:"2rem"}}>nabin@example.com &nbsp;·&nbsp; Perth, Australia</p>
       </div>
     </section>
 
     {/* FOOTER */}
     <footer style={{borderTop:`1px solid ${GOLD}15`,padding:"2rem 6vw",display:"flex",justifyContent:"space-between",alignItems:"center",zIndex:10,position:"relative"}}>
-      {["Â© 2025 Nabin Dhami","Perth Â· Nepal Â· Everywhere","AI Systems Builder"].map(t=>(
+      {["© 2025 Nabin Dhami","Perth · Nepal · Everywhere","AI Systems Builder"].map(t=>(
         <span key={t} style={{fontSize:".52rem",letterSpacing:".35em",color:"rgba(245,240,232,.15)",textTransform:"uppercase"}}>{t}</span>
       ))}
     </footer>

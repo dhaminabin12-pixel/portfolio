@@ -7,7 +7,7 @@ const OBSIDIAN = "#03030a";
 
 // ── DATA ──────────────────────────────────────────────────────────────────────
 const SERVICES = [
-  { icon:"📞", title:"AI Receptionist Systems", desc:"Handle incoming calls, bookings, and customer queries automatically 24/7. Never miss a lead again.", accent:"#4488ff" },
+  { icon:"📞", title:"AI Receptionist Systems", desc:"Handhle incoming calls, bookings, and customer queries automatically 24/7. Never miss a lead again.", accent:"#4488ff" },
   { icon:"⚙️", title:"Automation Workflows", desc:"Build smart systems using n8n and AI to automate your business operations end-to-end.", accent:GOLD },
   { icon:"🌐", title:"Website & Lead Systems", desc:"Create websites and funnels designed to generate leads and bookings on autopilot.", accent:"#22dd88" },
   { icon:"🎬", title:"AI Content & Video", desc:"Produce cinematic AI-driven content for marketing and branding at scale.", accent:"#bb44ff" },
@@ -392,7 +392,7 @@ export default function Portfolio() {
       .nav-btn{background:none;border:none;cursor:pointer;font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.4em;color:rgba(245,240,232,.4);text-transform:uppercase;position:relative;padding-bottom:3px;transition:color .3s,letter-spacing .3s;}
       .nav-btn::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:${GOLD};transition:width .4s cubic-bezier(.23,1,.32,1);}
       .nav-btn:hover{color:${GOLD};letter-spacing:.5em;}
-      .nav-btn:hover::after{width:100%;}
+      .nav-btn:hover::after{width:100%;}h
 
       .btn-gold{display:inline-block;padding:.85rem 2.2rem;border:1px solid ${GOLD};color:${GOLD};font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;text-decoration:none;background:transparent;cursor:pointer;transition:background .4s,color .4s,letter-spacing .3s,box-shadow .4s;animation:borderPulse 3s ease-in-out infinite;}
       .btn-gold:hover{background:${GOLD};color:${OBSIDIAN};letter-spacing:.5em;box-shadow:0 0 50px ${GOLD}55;}
@@ -771,7 +771,7 @@ export default function Portfolio() {
         </p>
         <div style={{display:"flex",gap:"1.2rem",justifyContent:"center",flexWrap:"wrap",marginBottom:"1.5rem"}}>
           <button className="btn-gold" onClick={()=>go("demo")}>Book a Demo</button>
-          <a href="mailto:nabin@example.com" className="cta">Contact Me</a>
+          <a href="https://mail.google.com/mail/?view=cm&to=nabinofficial192@gmail.com" className="cta" target="_blank" rel="noopener noreferrer" onClick={(e)=>{e.preventDefault();window.open("https://mail.google.com/mail/?view=cm&to=nabinofficial192@gmail.com","_blank");}}>Contact Me</a>
         </div>
         <p style={{fontSize:".58rem",letterSpacing:".35em",color:"rgba(245,240,232,.2)",textTransform:"uppercase",marginTop:"2rem"}}>nabin@example.com &nbsp;·&nbsp; Perth, Australia</p>
       </div>

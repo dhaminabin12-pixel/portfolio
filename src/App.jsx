@@ -610,7 +610,7 @@ export default function Portfolio() {
               <div style={{border:`1px solid ${GOLD}33`,padding:"2rem",background:"rgba(201,168,76,.04)",marginBottom:"1.5rem"}}>
                 <p style={{fontSize:".55rem",letterSpacing:".4em",color:GOLD,textTransform:"uppercase",marginBottom:".8rem"}}>Call Now</p>
                 <p style={{fontFamily:"'Cinzel',serif",fontSize:"2rem",fontWeight:700,color:BONE,letterSpacing:".1em",animation:"goldGlow 3s ease-in-out infinite"}}>
-                  +61 XXX XXX XXX
+                  +61 485 010 230
                 </p>
                 <p style={{fontSize:".6rem",color:"rgba(245,240,232,.3)",marginTop:".5rem"}}>Live AI receptionist — available 24/7</p>
               </div>

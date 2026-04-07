@@ -29,10 +29,10 @@ const PROJECTS = [
     links:[{label:"View Website",href:"#"}],
   },
   {
-    num:"03", name:"TooFan", tag:"SaaS · Nepal", accent:"#bb44ff",
+    num:"03", name:"TooFan", tag:"SaaS", accent:"#bb44ff",
     problem:"Need for a scalable multi-service food delivery and ride-hailing platform.",
     solution:"Developed full-stack system with multiple apps, backend, and payment integration.",
-    result:"Functional platform handling food delivery and ride services across Nepal.",
+    result:"Functional platform handling food delivery and ride services across Australia.",
     links:[{label:"View Project",href:"#"}],
   },
 ];
@@ -460,15 +460,25 @@ export default function Portfolio() {
 
       {/* Name */}
       <div style={{perspective:"800px",animation:"fadeUp 1.3s .5s both",marginBottom:"1.5rem"}}>
-        <div style={{fontFamily:"'Cinzel',serif",fontSize:"clamp(4rem,11vw,10rem)",fontWeight:900,letterSpacing:".08em",lineHeight:.9,userSelect:"none"}}>
-          {"NABIN DHAMI".split("").map((ch,i)=>(
-            <span key={i} className="hero-ch" style={{
-              color:ch==="N"||ch==="D"?GOLD:BONE,
-              display:ch===" "?"inline":"inline-block",
-              textShadow:ch==="N"||ch==="D"?`0 0 30px ${GOLD}88`:undefined,
-              width:ch===" "?"0.4em":undefined,
-            }}>{ch===" "?"\u00A0":ch}</span>
-          ))}
+        <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:".15em"}}>
+          <div style={{fontFamily:"'Cinzel',serif",fontSize:"clamp(4rem,11vw,10rem)",fontWeight:900,letterSpacing:".08em",lineHeight:.9,userSelect:"none"}}>
+            {"NABIN".split("").map((ch,i)=>(
+              <span key={i} className="hero-ch" style={{
+                color:ch==="N"?GOLD:BONE,
+                display:"inline-block",
+                textShadow:ch==="N"?`0 0 30px ${GOLD}88`:undefined,
+              }}>{ch}</span>
+            ))}
+          </div>
+          <div style={{fontFamily:"'Cinzel',serif",fontSize:"clamp(2rem,5.5vw,5.5rem)",fontWeight:900,letterSpacing:".12em",lineHeight:.9,userSelect:"none"}}>
+            {"DHAMI".split("").map((ch,i)=>(
+              <span key={i} className="hero-ch" style={{
+                color:ch==="D"?GOLD:BONE,
+                display:"inline-block",
+                textShadow:ch==="D"?`0 0 30px ${GOLD}88`:undefined,
+              }}>{ch}</span>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -707,7 +717,7 @@ export default function Portfolio() {
             I build AI systems that replace repetitive work and help businesses grow faster. Focused on automation, AI voice agents, and real-world business impact. Based in Perth, Australia.
           </p>
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"1.5rem"}}>
-            {[["6+","Projects Delivered"],["24/7","Systems Running"],["Perth","Based in AU"],["Nepal","Origin & Roots"]].map(([v,label])=>(
+            {[["6+","Projects Delivered"],["24/7","Systems Running"],["Perth","Based in AU"]].map(([v,label])=>(
               <div key={label} style={{borderTop:`1px solid ${GOLD}33`,paddingTop:"1.2rem"}}>
                 <div style={{fontFamily:"'Cinzel',serif",fontSize:"2.5rem",fontWeight:700,color:GOLD,lineHeight:1,textShadow:`0 0 20px ${GOLD}55`}}>{v}</div>
                 <div style={{fontSize:".52rem",letterSpacing:".35em",color:"rgba(245,240,232,.3)",textTransform:"uppercase",marginTop:".4rem"}}>{label}</div>
@@ -779,7 +789,7 @@ export default function Portfolio() {
 
     {/* FOOTER */}
     <footer style={{borderTop:`1px solid ${GOLD}15`,padding:"2rem 6vw",display:"flex",justifyContent:"space-between",alignItems:"center",zIndex:10,position:"relative"}}>
-      {["© 2025 Nabin Dhami","Perth · Nepal · Everywhere","AI Systems Builder"].map(t=>(
+      {["© 2025 Nabin Dhami","Perth · Australia · Everywhere","AI Systems Builder"].map(t=>(
         <span key={t} style={{fontSize:".52rem",letterSpacing:".35em",color:"rgba(245,240,232,.15)",textTransform:"uppercase"}}>{t}</span>
       ))}
     </footer>

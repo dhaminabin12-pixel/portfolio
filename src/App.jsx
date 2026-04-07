@@ -781,7 +781,7 @@ export default function Portfolio() {
         </p>
         <div style={{display:"flex",gap:"1.2rem",justifyContent:"center",flexWrap:"wrap",marginBottom:"1.5rem"}}>
           <button className="btn-gold" onClick={()=>go("demo")}>Book a Demo</button>
-          <a href="https://mail.google.com/mail/?view=cm&to=nabinofficial192@gmail.com" target="_blank" rel="noopener noreferrer" className="cta">Contact Me</a>
+          <a href="https://mail.google.com/mail/?view=cm&to=nabinofficial192@gmail.com" target="_blank" rel="noopener noreferrer" className="cta" onClick={(e)=>{e.preventDefault();window.open("https://mail.google.com/mail/?view=cm&to=nabinofficial192@gmail.com","_blank","noopener,noreferrer");}}>Contact Me</a>
         </div>
         <p style={{fontSize:".58rem",letterSpacing:".35em",color:"rgba(245,240,232,.2)",textTransform:"uppercase",marginTop:"2rem"}}>nabinofficial192@gmail.com &nbsp;·&nbsp; Perth, Australia</p>
       </div>
